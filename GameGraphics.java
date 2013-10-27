@@ -6,6 +6,8 @@ import java.awt.event.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+//#420yolosweg
+
 public class GameGraphics extends JPanel implements ActionListener {
 
     Timer t = new Timer(50, this);
