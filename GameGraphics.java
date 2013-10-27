@@ -6,8 +6,7 @@ import java.awt.event.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-//#420yolosweg
-//Testing the sychronization
+//Test This:
 
 public class GameGraphics extends JPanel implements ActionListener {
 
