@@ -6,20 +6,13 @@ import java.awt.event.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-//You can fix this here by:
-
-
-
-
-
-
-
-
 public class GameGraphics extends JPanel implements ActionListener {
 
     Timer t = new Timer(50, this);
     LandscapeGen land = new LandscapeGen();
     GlobalNums num = new GlobalNums();
+    
+    //Color values for tiles based on properties
     Color water = new Color(0, 75, 255);
     Color grass = new Color(50, 255, 50);
     Color wood = new Color(120, 69, 19);
@@ -37,6 +30,8 @@ public class GameGraphics extends JPanel implements ActionListener {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         this.setBackground(Color.black);
+        
+        //Nested for loop to draw all rows and columns
         for (int x = 0; x < num.tileRow; x++) {
             for (int y = 0; y < num.tileCol; y++) {
 
@@ -50,6 +45,8 @@ public class GameGraphics extends JPanel implements ActionListener {
             }
 
         }
+        
+        //Code to draw and animate player
         g.setColor(Color.red);
         g.fillRect(num.tileSq * num.zoom * num.tileSq, num.tileSq * num.zoom * num.tileSq, num.tileSq * num.zoom, num.tileSq * num.zoom);
         g.setColor(Color.white);
@@ -64,6 +61,10 @@ public class GameGraphics extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (land.go) {
+            
+            //Code to add different tiles to the ones previously explored
+            
+            //Needs to be cleaned up
             
             try{
             land.xTile[Math.abs(-num.yOff/num.tileSq + 10)][Math.abs(-num.xOff/num.tileSq + 10)].isDiscovered = true;

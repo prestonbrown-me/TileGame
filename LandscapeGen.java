@@ -18,6 +18,9 @@ public class LandscapeGen {
 
         int probability = 1;
 
+        
+        //Add the tiles to a two-dimensional array
+        
         for (int i = 0; i < num.tileCol; i++) {
             for (int z = 0; z < num.tileRow; z++) {
 
@@ -54,6 +57,9 @@ public class LandscapeGen {
 
         int count;
 
+        
+        //Check the amount of blocks around it to see if it stick out alone
+        //If it is an isolated block of a single property, it gets changed to grass.
         for (int i = 0; i < num.tileCol; i++) {
 
             for (int z = 0; z < num.tileRow; z++) {
@@ -112,6 +118,7 @@ public class LandscapeGen {
             }
         }
 
+        //Allows drawing to start after tiles are drawn
         go = true;
 
     }
